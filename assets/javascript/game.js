@@ -29,6 +29,11 @@ let gundamFighter = {
   // displays gundams to page
   displayGundams: function () {
     $.each(this.gundams, function (key) {
+      // gundam container
+      let gundamDiv = $("<div>");
+      gundamDiv.attr("class", "gundam-container");
+      gundamDiv.html("<h1 class='gundam-name'>" + key.toUpperCase() + "</h1>");
+      // gundam image
       let heroImg = $("<img>");
       heroImg.attr({
         src: gundamFighter.gundams[key].image,
@@ -36,8 +41,9 @@ let gundamFighter = {
         class: "gundam-img",
         value: key,
       });
-      heroImg.css({ height: "250px", width: "225px" });
-      $("#characters").append(heroImg);
+      heroImg.css({ height: "300px", width: "225px" });
+      gundamDiv.append(heroImg);
+      $("#characters").append(gundamDiv);
     });
   },
 };

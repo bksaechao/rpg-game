@@ -1,3 +1,4 @@
+/* General */
 body {
 color: #ffff;
 background-color: black;
@@ -11,6 +12,10 @@ header {
     text-shadow: 2px 2px 5px cornflowerblue;
 }
 
+h1 {
+    text-align: center;
+}
+
 .container {
     width: 1024px;
     margin: 0 auto;
@@ -18,20 +23,42 @@ header {
     font-size: 30px;
 }
 
+#character-select {
+    display: flex;
+}
+
+#enemies {
+    display: flex;
+    justify-content: center;
+}
+
+#arena {
+    display: flex;
+    justify-content: center;
+}
+
+/* Gundam Image */
+.gundam-container {
+    position: relative;
+}
+
 .gundam-img {
     padding: 2px;
-    margin: 10px;
+    margin: 5px;
     border: 3px outset khaki;
 }
 
-.gundam-img:hover {
-    cursor: pointer;
+.hero-gundam-img {
+    padding: 2px;
+    margin: 5px;
+    border: 3px outset khaki;
+    /* animation: glow 1s ease-in-out infinite alternate; */
 }
 
-.gundam-container {
-    float: left;
-    text-align: center;
-    position: relative;
+.enemy-gundam-img {
+    padding: 2px;
+    margin: 5px;
+    border: 3px outset darkred;
 }
 
 .gundam-name {
@@ -40,3 +67,29 @@ header {
     bottom: 15px;
     left: 14px;
 }
+
+.gundam-health {
+    position: absolute;
+    top: 15px;
+    right: 14px;
+}
+
+.gundam-img:hover,
+.enemy-gundam-img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.gundam-img:active,
+.enemy-gundam-img:active {
+    opacity: unset;
+}
+
+/* @keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #eeff00, 0 0 40px #eeff00, 0 0 50px #eeff00, 0 0 60px #eeff00, 0 0 70px #eeff00;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #eeff00, 0 0 40px #eeff00, 0 0 50px #eeff00, 0 0 60px #eeff00, 0 0 70px #eeff00, 0 0 80px #eeff00;
+    }
+} */

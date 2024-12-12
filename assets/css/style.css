@@ -25,6 +25,7 @@ h1 {
 
 #character-select {
     display: flex;
+    justify-content: center;
 }
 
 #enemies {
@@ -38,26 +39,22 @@ h1 {
 }
 
 /* Gundam Image */
-.gundam-container {
+.gundam-container,
+.enemy-gundam-container {
     position: relative;
 }
 
-.gundam-img {
-    padding: 2px;
-    margin: 5px;
-    border: 3px outset khaki;
-}
-
-.hero-gundam-img {
-    padding: 2px;
-    margin: 5px;
-    border: 3px outset khaki;
-    /* animation: glow 1s ease-in-out infinite alternate; */
-}
-
+.gundam-img,
+.hero-gundam-img,
 .enemy-gundam-img {
     padding: 2px;
     margin: 5px;
+    border: 3px outset khaki;
+    height: 285px;
+    width: 210px;
+}
+
+.enemy-gundam-img {
     border: 3px outset darkred;
 }
 
